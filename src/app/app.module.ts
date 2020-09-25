@@ -5,13 +5,15 @@ import { AppComponent } from './app.component';
 import { HolaComponent } from './hola/hola.component';
 import { PersonaComponent } from './persona/persona.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
+import { CursoComponent } from './curso/curso.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HolaComponent,
     PersonaComponent,
-    EmpleadoComponent
+    EmpleadoComponent,
+    CursoComponent
   ],
   imports: [
     BrowserModule
