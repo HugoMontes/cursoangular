@@ -1,0 +1,19 @@
+<h2>{{ title }}</h2>
+<h3>Empleado - Jefe</h3>
+<ul>
+  <li>Nombre: {{ empleado.nombre }}</li>
+  <li>Edad: {{ empleado.edad }}</li>
+  <li *ngIf="empleado.edad>=18">Mayor de edad</li>
+  <li *ngIf="empleado.edad<18">Menor de edad</li>
+  <li>Cargo: {{ empleado.cargo }}</li>
+  <li *ngIf="empleado.contratado">Esta contratado</li>
+  <li *ngIf="!empleado.contratado">No esta contratado</li>
+  <li>Contratado: {{ empleado.contratado }}</li>
+</ul>
+<h3>Empleado - Programador</h3>
+<ul>
+  <li>Nombre: {{ trabajadores[2].nombre }}</li>
+  <li>Edad: {{ trabajadores[2].edad }}</li>
+  <li>Cargo: {{ trabajadores[2].cargo }}</li>
+  <li>Contratado: {{ trabajadores[2].contratado }}</li>
+</ul>
