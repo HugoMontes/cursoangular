@@ -1,11 +1,19 @@
 <h2>{{ title }}</h2>
 <h3>Profesor</h3>
-<ul>
-  <li>Nombre: {{ profesor.nombre }}</li>
-  <li>Sueldo: {{ profesor.sueldo }}</li> 
-  <li *ngIf="profesor.sueldo >= 2000">Su sueldo es mayor al minimo nacional</li>
-  <li *ngIf="profesor.sueldo < 2000">Su sueldo es menor al minimo nacional</li>
-  <li>Contratado: {{ profesor.contratado }}</li>
-  <li *ngIf="profesor.contratado">Esta contratado</li>
-  <li *ngIf="!profesor.contratado">No esta contratado</li>
-</ul>
+<button type="button" (click)="cambiarEstado(false)">
+    Ocultar Datos
+</button>
+<button type="button" (click)="cambiarEstado(true)">
+    Mostrar Datos
+</button>  
+<div *ngIf="mostrar_datos">  
+    <ul>
+        <li>Nombre: {{ profesor.nombre }}</li>
+        <li>Sueldo: {{ profesor.sueldo }}</li> 
+        <li *ngIf="profesor.sueldo >= 2000">Su sueldo es mayor al minimo nacional</li>
+        <li *ngIf="profesor.sueldo < 2000">Su sueldo es menor al minimo nacional</li>
+        <li>Contratado: {{ profesor.contratado }}</li>
+        <li *ngIf="profesor.contratado">Esta contratado</li>
+        <li *ngIf="!profesor.contratado">No esta contratado</li>
+    </ul>
+</div>
