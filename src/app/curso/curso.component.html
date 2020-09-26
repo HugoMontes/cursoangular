@@ -6,7 +6,7 @@
 <button type="button" (click)="cambiarEstado(true)">
     Mostrar Datos
 </button>  
-<div *ngIf="mostrar_datos">  
+<div *ngIf="mostrarDatos">  
     <ul>
         <li>Nombre: {{ profesor.nombre }}</li>
         <li>Sueldo: {{ profesor.sueldo }}</li> 
@@ -17,3 +17,23 @@
         <li *ngIf="!profesor.contratado">No esta contratado</li>
     </ul>
 </div>
+<h3>Lista de Estudiantes</h3>
+<table border="1">
+    <thead>
+      <tr>
+        <th>Indice</th>
+        <th>Nombre</th>
+        <th>Edad</th>
+        <th>Nota</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let est of estudiantes; let i=index">
+        <td>{{ i }}</td>
+        <td>{{ est.nombre }}</td>
+        <td>{{ est.edad }}</td>
+        <td>{{ est.nota }}</td>
+      </tr>
+    </tbody>
+ </table>
+  

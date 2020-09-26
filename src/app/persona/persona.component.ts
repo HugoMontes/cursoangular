@@ -35,11 +35,11 @@ export class PersonaComponent implements OnInit {
 
   }
   // Definir una funcion con parametros
-  hola(nombre) {
+  hola(nombre): void {
     // alert('Hola ' + nombre);
   }
   // Definir una funcion que cambia valor de propiedad
-  cambiarEdad(edad) {
+  cambiarEdad(edad): void {
     this.edad = edad;
   }
 }
