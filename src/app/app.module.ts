@@ -6,6 +6,7 @@ import { HolaComponent } from './hola/hola.component';
 import { PersonaComponent } from './persona/persona.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { CursoComponent } from './curso/curso.component';
+import { EstiloComponent } from './estilo/estilo.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { CursoComponent } from './curso/curso.component';
     HolaComponent,
     PersonaComponent,
     EmpleadoComponent,
-    CursoComponent
+    CursoComponent,
+    EstiloComponent
   ],
   imports: [
     BrowserModule

@@ -1,0 +1,39 @@
+<h3>Directiva ngSwitch</h3>
+<div [ngSwitch]="color">
+    <p *ngSwitchCase="'red'" [ngStyle]="{
+        'background':color, 
+        'padding':'12px', 
+        'color':'white'}">
+        Rojo - {{ color }}
+    </p>
+    <p *ngSwitchCase="'yellow'" [ngStyle]="{
+        'background':color, 
+        'padding':'12px', 
+        'color':'blak'}">
+        Amarrillo - {{ color }}
+    </p>
+    <p *ngSwitchCase="'green'" [ngStyle]="{
+        'background':color, 
+        'padding':'12px', 
+        'color':'white'}">
+        Verde - {{ color }}
+    </p>
+</div>
+<!-- Botones para cambiar el color -->
+<button (click)="cambiarColor('red')">
+    Rojo
+</button>
+<button (click)="cambiarColor('yellow')">
+    Amarrilo
+</button>
+<button (click)="cambiarColor('green')">
+    Verde
+</button>
+<div [style.border]="color=='red'?'5px solid red'
+                                 :'5px dotted blue'"
+     [class.fondoRojo]="color=='red'"
+     [ngClass]="{
+        fondoAmarrillo: color=='yellow',
+        fondoVerde: color=='green'}">
+    <strong>Color seleccionado: </strong> {{ color }}
+</div>
