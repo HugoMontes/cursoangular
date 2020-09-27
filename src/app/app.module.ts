@@ -5,20 +5,20 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
 // Se podria eliminar los otros componentes
-// import { HolaComponent } from './hola/hola.component';
-// import { PersonaComponent } from './persona/persona.component';
-// import { EmpleadoComponent } from './empleado/empleado.component';
-// import { CursoComponent } from './curso/curso.component';
-// import { EstiloComponent } from './estilo/estilo.component';
+import { HolaComponent } from './hola/hola.component';
+import { PersonaComponent } from './persona/persona.component';
+import { EmpleadoComponent } from './empleado/empleado.component';
+import { CursoComponent } from './curso/curso.component';
+import { EstiloComponent } from './estilo/estilo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HolaComponent,
-    // PersonaComponent,
-    // EmpleadoComponent,
-    // CursoComponent,
-    // EstiloComponent
+    HolaComponent,
+    PersonaComponent,
+    EmpleadoComponent,
+    CursoComponent,
+    EstiloComponent
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [
