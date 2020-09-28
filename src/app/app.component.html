@@ -1,9 +1,22 @@
-<div style="text-align:center">
+<app-header></app-header>
+<div class="container-fluid">
+  <div class="row">
+    <app-navigation></app-navigation>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">{{title}}</h1>
+      </div>      
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
+
+<!-- <div style="text-align:center">
   <h1> {{title}} </h1>
 </div>
-<hr/>
+<hr/> -->
 <!-- Definir un menu -->
-<nav>
+<!-- <nav>
   <a [routerLink]="['/home']" [routerLinkActive]="['activado']">Inicio</a> | 
   <a [routerLink]="['/hola']" [routerLinkActive]="['activado']">Hola Mundo</a> |
   <a [routerLink]="['/persona']" [routerLinkActive]="['activado']">Propiedades</a> |
@@ -11,7 +24,7 @@
   <a [routerLink]="['/estilo']" [routerLinkActive]="['activado']">Directivas de estilos</a> |
   <a [routerLink]="['/parametros', 'Juan']" [routerLinkActive]="['activado']">Parametros</a> |
 </nav>
-<hr/>
+<hr/> -->
 <!-- app-hola></app-hola -->
 <!-- app-persona></app-persona -->
 <!-- app-empleado></app-empleado -->
@@ -19,4 +32,4 @@
 <!-- app-estilo></app-estilo -->
 <!-- Dentro de router-outlet se carga el componente -->
 <!-- de la url solicitada -->
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->

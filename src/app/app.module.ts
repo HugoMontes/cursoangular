@@ -12,6 +12,8 @@ import { CursoComponent } from './curso/curso.component';
 import { EstiloComponent } from './estilo/estilo.component';
 import { HomeComponent } from './home/home.component';
 import { ParametrosComponent } from './parametros/parametros.component';
+import { HeaderComponent } from './template/header/header.component';
+import { NavigationComponent } from './template/navigation/navigation.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { ParametrosComponent } from './parametros/parametros.component';
     CursoComponent,
     EstiloComponent,
     HomeComponent,
-    ParametrosComponent
+    ParametrosComponent,
+    HeaderComponent,
+    NavigationComponent
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [
