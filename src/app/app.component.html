@@ -2,12 +2,20 @@
   <h1> {{title}} </h1>
 </div>
 <hr/>
+<!-- Definir un menu -->
+<nav>
+  <a [routerLink]="['/home']">Inicio</a> | 
+  <a [routerLink]="['/hola']">Hola Mundo</a> |
+  <a [routerLink]="['/persona']">Propiedades</a> |
+  <a [routerLink]="['/curso']">Directivas</a> |
+  <a [routerLink]="['/estilo']">Directivas de estilos</a>
+</nav>
+<hr/>
 <!-- app-hola></app-hola -->
 <!-- app-persona></app-persona -->
 <!-- app-empleado></app-empleado -->
 <!-- app-curso></app-curso -->
 <!-- app-estilo></app-estilo -->
-
 <!-- Dentro de router-outlet se carga el componente -->
 <!-- de la url solicitada -->
 <router-outlet></router-outlet>

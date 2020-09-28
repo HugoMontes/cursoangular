@@ -10,6 +10,7 @@ import { PersonaComponent } from './persona/persona.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { CursoComponent } from './curso/curso.component';
 import { EstiloComponent } from './estilo/estilo.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EstiloComponent } from './estilo/estilo.component';
     PersonaComponent,
     EmpleadoComponent,
     CursoComponent,
-    EstiloComponent
+    EstiloComponent,
+    HomeComponent
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [

@@ -7,12 +7,15 @@ import { HolaComponent } from './hola/hola.component';
 import { PersonaComponent } from './persona/persona.component';
 import { CursoComponent } from './curso/curso.component';
 import { EstiloComponent } from './estilo/estilo.component';
+// Importar el componente Home
+import { HomeComponent } from './home/home.component';
 // Definir una constante que contiene un array de objetos json con
 // las rutas asociadas a un componente
 const appRoutes: Routes = [
-  // Definir la ruta home/inicial
-  {path: '', component: HolaComponent},
+  // Definir la ruta home como inicial
+  {path: '', component: HomeComponent},
   // Definir las rutas para los componentes
+  {path: 'home', component: HomeComponent},
   {path: 'hola', component: HolaComponent},
   {path: 'persona', component: PersonaComponent},
   {path: 'curso', component: CursoComponent},
