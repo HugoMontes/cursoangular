@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 // Importar los modulos Router, ActivatedRoute y Params
-// import { Router, ActivatedRoute, Params } from '@angular/router';
-import { ActivatedRoute} from '@angular/router';
+// import { Router, ActivatedRoute, ParamMap } from '@angular/router';
+// Importar el modulo Router
+import { Router, ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-parametros',
@@ -13,9 +14,11 @@ export class ParametrosComponent implements OnInit {
   public title = "Paso de Parametros"
   // Propiedad nombre
   public nombre;
-  // Constructor
+  // En el constructor iniciar el objeto ActivatedRoute
+  // En el constructor iniciar el objeto Router
   constructor(
     private route: ActivatedRoute,
+    private router: Router
   ) { }
   // Funcion inicial
   ngOnInit(): void {
@@ -26,5 +29,13 @@ export class ParametrosComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
         this.nombre = params.get('param_nombre');
     });
+  }
+  // Crear el metodo redirigir1
+  redirigir1() {
+    this.router.navigate(['/home']);
+  }
+  // Crear el metodo redirigir2
+  redirigir2() {
+    this.router.navigate(['/parametros', 'Luis']);
   }
 }
