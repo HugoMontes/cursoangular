@@ -9,6 +9,9 @@ import { CursoComponent } from './curso/curso.component';
 import { EstiloComponent } from './estilo/estilo.component';
 // Importar el componente Home
 import { HomeComponent } from './home/home.component';
+// Importar el componenete parametro
+import { ParametrosComponent } from './parametros/parametros.component';
+
 // Definir una constante que contiene un array de objetos json con
 // las rutas asociadas a un componente
 const appRoutes: Routes = [
@@ -20,6 +23,8 @@ const appRoutes: Routes = [
   {path: 'persona', component: PersonaComponent},
   {path: 'curso', component: CursoComponent},
   {path: 'estilo', component: EstiloComponent},
+  // Definir una ruta con paso de parametro
+  {path: 'parametros/:param_nombre', component: ParametrosComponent},
   // Definir la ruta para el error 404
   {path: '**', component: EstiloComponent},
 ];

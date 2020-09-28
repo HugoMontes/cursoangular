@@ -11,6 +11,7 @@ import { EmpleadoComponent } from './empleado/empleado.component';
 import { CursoComponent } from './curso/curso.component';
 import { EstiloComponent } from './estilo/estilo.component';
 import { HomeComponent } from './home/home.component';
+import { ParametrosComponent } from './parametros/parametros.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HomeComponent } from './home/home.component';
     EmpleadoComponent,
     CursoComponent,
     EstiloComponent,
-    HomeComponent
+    HomeComponent,
+    ParametrosComponent
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [
