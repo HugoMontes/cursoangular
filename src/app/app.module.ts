@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 // Importar el modulo para trabajar con formularios
 import { FormsModule } from '@angular/forms';
+// Importar el CalculadoraPipe
+import { CalculadoraPipe } from './pipes/calculadora.pipe';
 
 import { AppComponent } from './app.component';
 // Se podria eliminar los otros componentes
@@ -32,7 +34,9 @@ import { FiltrosComponent } from './filtros/filtros.component';
     HeaderComponent,
     NavigationComponent,
     ProductoComponent,
-    FiltrosComponent
+    FiltrosComponent,
+    // Cargar el conversor Pipe
+    CalculadoraPipe
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [
