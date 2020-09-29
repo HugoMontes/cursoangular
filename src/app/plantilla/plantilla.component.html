@@ -1,0 +1,32 @@
+<h2> {{title}} </h2>
+<!-- Boton que cambia el estado administrador -->
+<button (click)="cambiar()">Cambiar administrador</button>
+
+<h3>IF-ELSE sin ngTemplate</h3>
+<div *ngIf="administrador">
+  <strong style="background:yellow;">Eres el administrador...</strong>
+</div>
+<div *ngIf="!administrador">
+  <strong style="background:red;">NO eres el administrador...</strong>
+</div>
+
+<h3>IF-ELSE con ngTemplate</h3>
+<!-- En caso que no sea Administrador llamar a noAdmin-->
+<div *ngIf="administrador; else noAdmin">
+  <!-- Codigo en caso que sea administrador -->
+  <strong style="background:yellow;">Eres el administrador...</strong>
+</div>
+<!-- Definir un template con la directiva ng-template y nombre noAdmin -->
+<ng-template #noAdmin>
+  <!-- Codigo en caso que NO sea administrador -->
+  <strong style="background:red;">NO eres el administrador...</strong>
+</ng-template>
+
+<h3>IF-ELSE-THEN con ngTemplate</h3>
+<!-- Si es administrador carga template admin en otro caso carga noAdmin -->
+<div *ngIf="administrador; then admin else noAdmin"></div>
+<!-- Definir una template con la directiva ng-template con nombre admin -->
+<ng-template #admin>
+  <!-- Codigo en caso que sea administrador -->
+  <strong style="background:yellow;">Eres el administrador...</strong>
+</ng-template>

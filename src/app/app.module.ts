@@ -20,6 +20,7 @@ import { HeaderComponent } from './template/header/header.component';
 import { NavigationComponent } from './template/navigation/navigation.component';
 import { ProductoComponent } from './producto/producto.component';
 import { FiltrosComponent } from './filtros/filtros.component';
+import { PlantillaComponent } from './plantilla/plantilla.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { FiltrosComponent } from './filtros/filtros.component';
     ProductoComponent,
     FiltrosComponent,
     // Cargar el conversor Pipe
-    CalculadoraPipe
+    CalculadoraPipe,
+    PlantillaComponent
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [
