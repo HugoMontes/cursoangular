@@ -25,15 +25,14 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/css/bootstrap.min.css",
-              "src/assets/css/starter-template.css"
+              "src/assets/dist/css/bootstrap.min.css",
+              "src/assets/vendor/fontawesome/css/all.min.css",
+              "src/assets/dist/css/starter-template.css"
             ],
             "scripts": [
-              "src/assets/js/jquery-3.5.1.slim.min.js",
-              "src/assets/js/feather.min.js",
-              "src/assets/js/popper.min.js",
-              "src/assets/js/bootstrap.min.js",
-              "src/assets/js/dashboard.js"
+              "src/assets/dist/js/jquery-3.5.1.slim.min.js",
+              "src/assets/dist/js/popper.min.js",
+              "src/assets/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
