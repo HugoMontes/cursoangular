@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // Importar el archivo de rutas
 import { AppRoutingModule } from './app-routing.module';
+// Importar el modulo para trabajar con formularios
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 // Se podria eliminar los otros componentes
@@ -14,6 +16,7 @@ import { HomeComponent } from './home/home.component';
 import { ParametrosComponent } from './parametros/parametros.component';
 import { HeaderComponent } from './template/header/header.component';
 import { NavigationComponent } from './template/navigation/navigation.component';
+import { ProductoComponent } from './producto/producto.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +29,14 @@ import { NavigationComponent } from './template/navigation/navigation.component'
     HomeComponent,
     ParametrosComponent,
     HeaderComponent,
-    NavigationComponent
+    NavigationComponent,
+    ProductoComponent
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule       // <--- importar en el NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
