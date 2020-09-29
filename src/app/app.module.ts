@@ -17,6 +17,7 @@ import { ParametrosComponent } from './parametros/parametros.component';
 import { HeaderComponent } from './template/header/header.component';
 import { NavigationComponent } from './template/navigation/navigation.component';
 import { ProductoComponent } from './producto/producto.component';
+import { FiltrosComponent } from './filtros/filtros.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ProductoComponent } from './producto/producto.component';
     ParametrosComponent,
     HeaderComponent,
     NavigationComponent,
-    ProductoComponent
+    ProductoComponent,
+    FiltrosComponent
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [

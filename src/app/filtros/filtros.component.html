@@ -1,0 +1,10 @@
+<h3>{{ title }}</h3>
+<p>Fecha sin filtro: {{ fecha }}</p>
+<!-- Hacer uso del pipe/tuberia para formato de fecha -->
+<p>Fecha completa: {{ fecha | date:'fullDate'}}</p>
+<p>Fecha completa: {{ fecha | date:'dd/MM/yyyy'}}</p>
+<!-- Hacer uso del pipe/tuberia para mayusculas -->
+<p>Fecha mayuscula: {{ fecha | date:'fullDate' | uppercase }}</p>
+<!-- Hacer uso del pipe/tuberia para minuscula -->
+<p>Fecha minuscula: {{ fecha | date:'fullDate' | lowercase }}</p>
+
