@@ -1,0 +1,25 @@
+<h4>{{ title }}</h4>
+<!-- Para definir un nombre se usa # -->
+<!-- Capturar el evento submit con el metodo onSubmit() -->
+<form #formCoche="ngForm" (ngSubmit)="onSubmit()">
+  <p>
+    <label>Marca:</label>
+    <!-- Para vincular el objeto coche del componente con el formulario es 
+  necesario agregar:
+         #marca: vincula con la propiedad del objeto
+         [(ngModel)]: permite modificar la propiedad del objeto -->
+    <input type="text" name="marca" #marca="ngModel" 
+   					  [(ngModel)]="coche.marca" required>
+  </p>
+  <p>
+    <label>Precio:</label>
+    <input type="text" name="precio" #precio="ngModel" 
+   [(ngModel)]="coche.precio" required>
+  </p>
+  <p>
+    <label>Color:</label>
+    <input type="text" name="color" #color="ngModel" 
+  [(ngModel)]="coche.color" required>
+  </p>
+  <input type="submit" value="Guardar">
+</form>

@@ -17,6 +17,8 @@ import { ProductoComponent } from './producto/producto.component';
 import { FiltrosComponent } from './filtros/filtros.component';
 // Importar el componente Plantilaa
 import { PlantillaComponent } from './plantilla/plantilla.component';
+// Importar el componente Coche
+import { CocheComponent } from './coche/coche.component';
 
 // Definir una constante que contiene un array de objetos json con
 // las rutas asociadas a un componente
@@ -37,6 +39,8 @@ const appRoutes: Routes = [
   {path: 'filtros', component: FiltrosComponent},
   // Definir una nueva ruta
   {path: 'plantilla', component: PlantillaComponent},
+  // Definir una nueva ruta
+  {path: 'coche', component: CocheComponent},
   // Definir la ruta para el error 404
   {path: '**', component: EstiloComponent},
 ];
