@@ -4,21 +4,57 @@
 <form #formCoche="ngForm" (ngSubmit)="onSubmit()">
 	<div class="form-group">
 		<label>Marca:</label>
-    	<!-- Para vincular el objeto coche del componente con el formulario es 
+		<!-- Para vincular el objeto coche del componente con el formulario es 
 			necesario agregar #marca para vincular con la propiedad 
-			y [(ngModel)] que permite modificar la    propiedad del objeto -->
-		<input type="text" name="marca" class="form-control"
-		      #marca="ngModel" [(ngModel)]="coche.marca" required>
+			y [(ngModel)] que permite modificar la propiedad del objeto -->
+		<input type="text" name="marca" class="form-control" 
+				#marca="ngModel" [(ngModel)]="coche.marca"
+				required minlength="3">
+		<!-- Agregar mensaje de validacion -->
+    	<!-- En caso que el usuario haya ingresado algun valor y luego 
+  			lo haya borrado (dirty y touched). -->
+		<div *ngIf="marca.invalid && (marca.dirty || marca.touched)" class="alert alert-danger">
+			<div *ngIf="marca.errors.required">
+				marca es requerido.
+			</div>
+			<div *ngIf="marca.errors.minlength">
+				marca debe tener al menos 3 caracteres.
+			</div>
+		</div>
 	</div>
 	<div class="form-group">
 		<label>Precio:</label>
-		<input type="text" name="precio" class="form-control"
-				#precio="ngModel" [(ngModel)]="coche.precio" required>
+		<!-- Adicionar una expresion regular "pattern" para ingresar unicamente 
+			digitos del 0 al 9, un punto y que se repita mas de una vez -->
+		<input type="text" name="precio" class="form-control" 
+				#precio="ngModel" [(ngModel)]="coche.precio" 
+				required pattern="[0-9.]+">
+		<!-- Adicionar mensajes de validacion -->
+		<div *ngIf="precio.invalid && (precio.dirty || precio.touched)" class="alert alert-danger">
+			<div *ngIf="precio.errors.required">
+				precio es requerido.
+			</div>
+			<div *ngIf="precio.errors?.pattern">
+				precio no es valido.
+		 	</div> 
+		</div>
 	</div>
 	<div class="form-group">
 		<label>Color:</label>
-		<input type="text" name="color" class="form-control"
-				#color="ngModel" [(ngModel)]="coche.color" required>
+		<!-- Adicionar una expresion regular "pattern" para ingresar unicamente 
+ 			letras de la A a la F, dígitos 0-9, el hastag y que se repita -->
+		<input type="text" name="color" class="form-control" 
+				#color="ngModel" [(ngModel)]="coche.color" 
+				required pattern="[#a-fA-F 0-9]+">
+		<!-- Adicionar mensajes de validacion -->
+		<div *ngIf="color.invalid && (color.dirty || color.touched)" class="alert alert-danger">
+			<div *ngIf="color.errors.required">
+				color es requerido.
+			</div>
+			<div *ngIf="color.errors?.pattern">
+				color no es valido.
+		 	</div> 
+		</div>
 	</div>
 	<input type="submit" class="btn btn-primary" value="Guardar">
 </form>
