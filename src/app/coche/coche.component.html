@@ -1,7 +1,7 @@
 <h4>{{ title }}</h4>
 <!-- Para definir un nombre se usa # en formulario -->
 <!-- Capturar el evento submit con el metodo onSubmit() -->
-<form #formCoche="ngForm" (ngSubmit)="onSubmit()">
+<form #formCoche="ngForm" (ngSubmit)="onSubmit(); formCoche.reset();">
 	<div class="form-group">
 		<label>Marca:</label>
 		<!-- Para vincular el objeto coche del componente con el formulario es 
@@ -56,5 +56,26 @@
 		 	</div> 
 		</div>
 	</div>
-	<input type="submit" class="btn btn-primary" value="Guardar">
+	<input type="submit" class="btn btn-primary" value="Guardar" [disabled]="!formCoche.form.valid">
 </form>
+<!-- Mostrar listado de coches -->
+<hr/>
+<div>
+	<h3>LISTADO DE COCHES</h3>
+	<table class="table">
+	  <thead>
+		<tr>
+		  <th>MARCA</th>
+		  <th>PRECIO</th>
+		  <th>COLOR</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr *ngFor="let coche of coches">
+		  <td>{{ coche.marca }}</td>
+		  <td>{{ coche.precio }}</td>
+		  <td>{{ coche.color }}</td>
+		</tr>
+	  </tbody>
+	</table>
+  
