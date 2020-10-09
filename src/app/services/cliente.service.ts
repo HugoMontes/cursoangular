@@ -10,7 +10,7 @@ import { Cliente } from '../model/cliente';
 // Definir constantes
 const endpoint = 'http://localhost:8080/';
 const httpOptions = {
-  headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+  headers: new HttpHeaders({ 'Content-Type': 'application/x-www-form-urlencoded' })
 };
 
 // Definir la clase para el servicio
@@ -26,5 +26,9 @@ export class ClienteService {
   findAllClientes(): Observable<Cliente[]> {
     // Concatenar al endpoint la ruta faltante para obtener el listado
     return this.http.get<Cliente[]>(endpoint + 'cliente');
+  }
+  // Crear funcion para guardar un registro
+  addCliente(cliente: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>(endpoint + 'cliente', cliente, httpOptions);
   }
 }

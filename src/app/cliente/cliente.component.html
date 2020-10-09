@@ -1,3 +1,18 @@
+<h4>NUEVO CLIENTE</h4>
+<form #formCliente="ngForm" (ngSubmit)="guardarCliente()">
+	<div class="form-group">
+		<label>Nombre:</label>
+		<input type="text" name="nombre" class="form-control"
+		      #nombre="ngModel" [(ngModel)]="cliente.nombre">
+	</div>
+	<div class="form-group">
+		<label>Email:</label>
+		<input type="text" name="email" class="form-control"
+			#email="ngModel" [(ngModel)]="cliente.email">
+	</div>
+	<input type="submit" class="btn btn-primary" value="Guardar">
+</form>
+<hr/>
 <h4>LISTA DE CLIENTES</h4>
 <table class="table">
     <thead>

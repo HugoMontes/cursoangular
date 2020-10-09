@@ -15,11 +15,16 @@ export class ClienteComponent implements OnInit {
 
   // Adicionar atributo coleccion de objetos
   public clientes: Cliente[];
+  // Adicionar atributo cliente
+  public cliente: Cliente;
 
   // Adicionar como atributo en el contructor el servicio
   constructor(
     private _peticionService: ClienteService
-  ) { }
+  ) { 
+    // Inicializar el objeto
+    this.cliente = new Cliente(0,'','');
+  }
 
   ngOnInit(): void {
     // Capturar la respuesta del servicio mediante subscribe()
@@ -40,6 +45,15 @@ export class ClienteComponent implements OnInit {
         // Mostrar el error en consola
         const errorMessage = <any>error;
         console.log(errorMessage);
+      }
+    );
+  }
+
+  guardarCliente(): void{
+    this._peticionService.addCliente(this.cliente).subscribe(
+      result => {
+        console.log(result);        
+        this.clientes.push(this.cliente);
       }
     );
   }
