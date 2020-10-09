@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 // Importar el archivo de rutas
 import { AppRoutingModule } from './app-routing.module';
+// Importar modulo HttpModule
+import { HttpClientModule } from '@angular/common/http';
 // Importar el modulo para trabajar con formularios
 import { FormsModule } from '@angular/forms';
 // Importar el CalculadoraPipe
@@ -22,6 +24,7 @@ import { ProductoComponent } from './producto/producto.component';
 import { FiltrosComponent } from './filtros/filtros.component';
 import { PlantillaComponent } from './plantilla/plantilla.component';
 import { CocheComponent } from './coche/coche.component';
+import { ClienteComponent } from './cliente/cliente.component';
 
 @NgModule({
   declarations: [
@@ -40,13 +43,15 @@ import { CocheComponent } from './coche/coche.component';
     // Cargar el conversor Pipe
     CalculadoraPipe,
     PlantillaComponent,
-    CocheComponent
+    CocheComponent,
+    ClienteComponent
   ],
   // Cargar el modulo para lanzar las rutas
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule       // <--- importar en el NgModule
+    FormsModule,       // <--- importar en el NgModule
+    HttpClientModule   // <--- importar en el NgModule
   ],
   providers: [],
   bootstrap: [AppComponent]
